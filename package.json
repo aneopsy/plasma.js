@@ -1,6 +1,6 @@
 {
     "name": "eth-plasma-js",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "",
     "main": "lib/eth-plasma.ts",
     "directories": {
@@ -73,6 +73,13 @@
             "^.+\\.tsx?$": "ts-jest"
         },
         "testRegex": "(/__tests__/.*(\\.|/)(test|spec))\\.tsx?$",
-        "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"]
+        "moduleFileExtensions": [
+            "ts",
+            "tsx",
+            "js",
+            "jsx",
+            "json",
+            "node"
+        ]
     }
 }
