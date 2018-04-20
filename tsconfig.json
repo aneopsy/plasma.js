@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist/",
+        "outFile": "./dist/bundle.ts",
+        "sourceMap": true,
+        "strictNullChecks": true,
+        "target": "es5",
+        "module": "commonjs",
+        "lib": ["es2015", "es2017"],
+        "allowJs": true,
+        "moduleResolution": "node",
+        "removeComments": true
+    },
+    "include": ["./src/", "./node_modules/types-bn/index.d.ts"]
+}

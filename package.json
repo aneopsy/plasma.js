@@ -1,0 +1,74 @@
+{
+  "name": "eth-plasma-js",
+  "version": "0.0.1",
+  "description": "",
+  "main": "lib/eth-plasma.ts",
+  "directories": {
+    "lib": "./lib"
+  },
+  "scripts": {
+    "clean": "rm -rf lib",
+    "build": "npm run lint && npm run clean && npm run build-dist",
+    "build-dist": "./node_modules/.bin/webpack --config webpack.config.js",
+    "precommit": "npm run eslint && npm run lint && npm run prettier",
+    "test": "jest",
+    "example":
+      "nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.spec.ts' --exec 'ts-node' example/index.ts",
+    "prepublish": "npm run build",
+    "eslint": "eslint --ignore-path .gitignore src/",
+    "lint": "npx standard --verbose --fix",
+    "prettier": "pretty-quick --staged"
+  },
+  "author": "Paul THEIS <paultevatheis@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^8.10.0",
+    "ts-node": "^5.0.1",
+    "xhr2": "^0.1.4"
+  },
+  "devDependencies": {
+    "babel-polyfill": "^6.26.0",
+    "@types/chai": " ^ 4.1 .2 ",
+    "@types/mocha": "^5.0.0",
+    "awesome-typescript-loader": "^4.0.1",
+    "chai-as-promised": "^7.1.1",
+    "coveralls": "^3.0.0",
+    "eslint": "^4.18.2",
+    "jest": "^18.1.0",
+    "json-loader": "^0.5.4",
+    "lint": "^1.1.2",
+    "nock": "^9.0.6",
+    "nodemon": "^1.17.3",
+    "prettier": "1.11.1",
+    "pretty-quick": "^1.4.1",
+    "source-map-loader": "^0.2.3",
+    "ts-jest": "^22.4.3",
+    "types-bn": "0.0.1",
+    "typescript": "^2.7.2",
+    "web3-typescript-typings": "^0.10.2",
+    "codecov": "^1.0.1",
+    "condition-circle": "^1.5.0",
+    "cz-conventional-changelog": "^1.2.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-loader": "^7.1.3",
+    "babel-preset-env": "^1.6.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "ethereumjs-util": "^5.1.5",
+    "webpack": "2.3.3",
+    "webpack-cli": "^2.0.10"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*(\\.|/)(test|spec))\\.tsx?$",
+    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"]
+  }
+}
